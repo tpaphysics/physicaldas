@@ -6,23 +6,12 @@ import { FaUserNinja } from 'react-icons/fa'
 
 
 import React, { useState } from 'react'
+import { TpaInputColors } from '../../styles/components'
 
 interface TpaInputProps extends InputProps {
     isPassword?: boolean
     iconType: 'user' | 'email' | 'lock' | 'computer' | 'work'
-    InputTheme?: {
-        border: string,
-        icons: string,
-        bg: string
-    }
 }
-
-const inputColor = {
-    principal: "purple.500",
-    secondary: "gray.500",
-    bg: 'gray.700'
-}
-
 
 const iconsOptions = {
     user: FaUserNinja,
@@ -31,38 +20,33 @@ const iconsOptions = {
     computer: MdComputer,
     work: MdWork
 }
-
+const colorScheme = {
+    primary: "yellow.400",
+    secondary: "gray.500"
+}
 
 export default function TpaInput({ type, isPassword, iconType, ...props }: TpaInputProps) {
+    const { primary, secondary } = TpaInputColors
     const [isVisiblePassword, setIsVisiblePassword] = useState(false);
     const [isPrimaryColor, setIsPrimaryColor] = useState(false)
-
-    const { principal, secondary, bg } = inputColor
 
 
     return (
         <InputGroup>
-            <InputLeftElement height='100%' children={<Icon color={isPrimaryColor ? inputColor.principal : inputColor.secondary} as={iconsOptions[iconType]} />} />
+            <InputLeftElement height='100%' children={<Icon color={isPrimaryColor ? primary : secondary} as={iconsOptions[iconType]} />} />
             <Input
                 {...props}
-                _placeholder={{
-                    color: inputColor.secondary
-                }}
                 type={isPassword ? (isVisiblePassword ? 'text' : 'password') : type}
-                border='none'
-                bg={inputColor.bg}
-                _focus={{
-                    border: '2px solid',
-                    borderColor: principal,
+                _placeholder={{
+                    color: secondary
 
                 }}
 
                 onFocus={() => setIsPrimaryColor(true)}
                 onBlur={() => setIsPrimaryColor(false)}
-                size="md"
             />
 
-            {isPassword && < InputRightElement children={<Icon color='primary' as={isVisiblePassword ? IoMdEyeOff : IoMdEye} onClick={() => setIsVisiblePassword(!isVisiblePassword)} />} />}
+            {isPassword && < InputRightElement h='100%' children={<Icon color={primary} as={isVisiblePassword ? IoMdEyeOff : IoMdEye} onClick={() => setIsVisiblePassword(!isVisiblePassword)} />} />}
         </InputGroup>
 
     )
