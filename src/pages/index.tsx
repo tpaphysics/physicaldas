@@ -1,8 +1,8 @@
-import { Button, VStack, Flex, Text, Box, Image, AvatarGroup, Avatar, border, useBreakpointValue, Stack, HStack } from '@chakra-ui/react'
+import { Button, VStack, Flex, Text, Box, Image } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import { avatars } from '../../arrays'
 import TpaInput from '../components/atoms/TpInput'
-import Avatars from '../components/templates/Avatars'
+import Avatars from '../components/molecules/Avatars'
 
 
 const Home: NextPage = () => {

@@ -4,6 +4,7 @@
     "prettier"
   ],
   "rules": {
+    "jsx-a11y/alt-text": "off",
     "lines-around-comment": [
       "error",
       {
