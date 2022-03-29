@@ -1,4 +1,4 @@
-import { HStack, Icon, VStack, Text } from '@chakra-ui/react'
+import { HStack, Icon, VStack, Text, Link } from '@chakra-ui/react'
 import { Item } from 'framer-motion/types/components/Reorder/Item'
 import React from 'react'
 import { IconType } from 'react-icons'
@@ -16,15 +16,19 @@ interface SideBarItemProps {
 export default function SideBarCategoryMenu({ menuTitle, itens }: SideBarItemProps) {
     return (
         <VStack align="flex-start" spacing={8}>
-            <Text color="gray.300">{menuTitle.toUpperCase()}</Text>
-            <VStack align="flex-start" fontSize="sm">
+            <Text color="gray.300" fontSize="sm">{menuTitle.toUpperCase()}</Text>
+            <VStack align="flex-start" fontSize="md">
                 {itens.map((item, index) => (
-                    <HStack key={index} spacing={4}>
+                    <Link display="flex" _hover={{
+                        color: "yellow.400"
+                    }} alignItems="center" key={index} gap="4">
+
                         <Icon as={item.icon} />
                         <Text>{item.name}</Text>
-                    </HStack>
+
+                    </Link>
                 ))}
             </VStack>
-        </VStack>
+        </VStack >
     )
 }

@@ -11,7 +11,7 @@ import SideBarCategoryMenu from './SideBarCategoryMenu'
 export default function SideBar() {
     return (
         <>
-            <VStack spacing={12}>
+            <VStack as="aside" spacing={10} alignItems="flex-start" w="220px"  >
                 <SideBarCategoryMenu menuTitle='Geral' itens={
                     [
                         {
@@ -21,6 +21,11 @@ export default function SideBar() {
                         {
                             name: "Users",
                             icon: FiUsers
+
+                        },
+                        {
+                            name: "Technology",
+                            icon: RiNodeTree
 
                         }
 
@@ -40,7 +45,24 @@ export default function SideBar() {
 
                     ]
                 } />
+                <SideBarCategoryMenu menuTitle='Pay' itens={
+                    [
+                        {
+                            name: "Thecs",
+                            icon: FaWpforms
+                        },
+                        {
+                            name: "Technology",
+                            icon: RiNodeTree
+
+                        }
+
+                    ]
+                } />
+
+
             </VStack>
+
 
         </>
     )

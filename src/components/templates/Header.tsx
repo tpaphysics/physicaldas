@@ -17,8 +17,8 @@ export default function Header() {
             px={6}
             align="center"
         >
-            <Image src="logoSmall.png" />
-            <RounderInput ml="24" size={"sm"} />
+            <Image src="logoSmall.png" w="160px" />
+            <RounderInput size={"sm"} ml="60px" />
 
             <HStack ml="auto" spacing={6} >
                 <IconsBar icons={[AiOutlineBell, AiOutlineUserAdd]} />

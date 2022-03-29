@@ -39,7 +39,7 @@ const Home: NextPage = () => {
         p={16}
         borderRadius={8}
       >
-        <VStack w="100%" spacing={4}  >
+        <VStack w="100%" spacing={4}>
           <TpaInput iconType='user' placeholder='Your name' />
           <TpaInput iconType='lock' placeholder='Your password' isPassword />
           <Button isFullWidth>Sigin</Button>
