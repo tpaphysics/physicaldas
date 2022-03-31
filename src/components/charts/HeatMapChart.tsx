@@ -30,44 +30,37 @@ function generateData(count: number, yrange: GenerateDataProps) {
 
 const series = [{
     name: 'Metric1',
-    data: generateData(24, {
+    data: generateData(40, {
         min: 0,
         max: 90
     })
 },
 {
     name: 'Metric2',
-    data: generateData(24, {
+    data: generateData(40, {
         min: 0,
         max: 90
     })
 },
 {
     name: 'Metric3',
-    data: generateData(24, {
+    data: generateData(40, {
         min: 0,
         max: 90
     })
 },
 {
     name: 'Metric4',
-    data: generateData(24, {
+    data: generateData(40, {
         min: 0,
         max: 90
     })
-},
-{
-    name: 'Metric5',
-    data: generateData(24, {
-        min: 0,
-        max: 90
-    })
-},
+}
 ]
 
 const options = {
     theme: {
-        palette: 'palette1' // upto palette10
+        palette: 'palette10' // upto palette10
     },
 
     //colors: ["#008FFB"],
@@ -79,7 +72,7 @@ const options = {
         zoom: {
             enabled: false
         },
-        foreColor: theme.colors.gray[500]
+        foreColor: theme.colors.gray[400]
     },
 
     grid: {
@@ -108,9 +101,9 @@ const options = {
 
 
 
-export default function ThreeMap() {
+export default function HeatMapChart() {
     return (
-        <Chart options={options} series={series} type="heatmap" height='100%' />
+        <Chart options={options} series={series} type="heatmap" height='120' />
 
     )
 }

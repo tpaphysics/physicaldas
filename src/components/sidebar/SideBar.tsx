@@ -22,13 +22,7 @@ export default function SideBar() {
                             name: "Users",
                             icon: FiUsers
 
-                        },
-                        {
-                            name: "Technology",
-                            icon: RiNodeTree
-
                         }
-
                     ]
                 } />
                 <SideBarCategoryMenu menuTitle='Automação' itens={
@@ -45,22 +39,6 @@ export default function SideBar() {
 
                     ]
                 } />
-                <SideBarCategoryMenu menuTitle='Pay' itens={
-                    [
-                        {
-                            name: "Thecs",
-                            icon: FaWpforms
-                        },
-                        {
-                            name: "Technology",
-                            icon: RiNodeTree
-
-                        }
-
-                    ]
-                } />
-
-
             </VStack>
 
 

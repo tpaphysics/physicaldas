@@ -1,6 +1,7 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 import { theme } from '@chakra-ui/react';
+import { ApexOptions } from 'apexcharts';
 
 const Chart = dynamic(
     () => import('react-apexcharts'),
@@ -11,7 +12,7 @@ const Chart = dynamic(
 
 const series = [{
     name: 'Inflation',
-    data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+    data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 5.4, 0.8, 1.5, 3.2]
 }]
 
 const options = {
@@ -99,17 +100,12 @@ const options = {
 
     }
 
-}
+} as ApexOptions;
 
 
-
-
-
-
-
-export default function Bar() {
+export default function BarChart() {
     return (
-        <Chart options={options} series={series} type="bar" height={120} />
+        <Chart options={options} series={series} type="bar" height="160" />
 
     )
 }

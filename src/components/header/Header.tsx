@@ -1,9 +1,9 @@
 import { Flex, HStack, Image, Divider } from '@chakra-ui/react'
 import React from 'react'
-import RounderInput from '../atoms/RounderInput'
+import RounderInput from '../forms/RounderInput'
 import { AiOutlineUserAdd, AiOutlineBell } from 'react-icons/ai'
-import AvatarProfile from '../molecules/AvatarProfile'
-import IconsBar from '../molecules/IconsBar'
+import AvatarProfile from './AvatarProfile'
+import IconsBar from '../header/IconsBar'
 
 export default function Header() {
     return (
@@ -18,7 +18,7 @@ export default function Header() {
             align="center"
         >
             <Image src="logoSmall.png" w="160px" />
-            <RounderInput size={"sm"} ml="60px" />
+            <RounderInput size={"sm"} ml={8} />
 
             <HStack ml="auto" spacing={6} >
                 <IconsBar icons={[AiOutlineBell, AiOutlineUserAdd]} />

@@ -1,6 +1,7 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 import { theme } from '@chakra-ui/react';
+import { ApexOptions } from 'apexcharts';
 
 const Chart = dynamic(
     () => import('react-apexcharts'),
@@ -44,6 +45,8 @@ const oprtions = {
         axisTicks: {
             color: theme.colors.gray[600]
         },
+
+
         categories: [
             '2021-03-29T00:00:00.00z',
             '2021-03-30T00:00:00.00z',
@@ -52,12 +55,14 @@ const oprtions = {
             '2021-04-02T00:00:00.00z',
             '2021-04-03T00:00:00.00z',
         ],
+
+        //categories: ["Θ", "2Θ", "3Θ", "4Θ", "5Θ", "6Θ",]
     }
-}
+} as ApexOptions;
 
 
 export default function LineCart() {
     return (
-        <Chart type='area' options={oprtions} series={series} height="204px" />
+        <Chart type='area' options={oprtions} series={series} height="160px" />
     )
 }
