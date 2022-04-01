@@ -2,9 +2,8 @@ import { ChakraTheme, ComponentStyleConfig } from "@chakra-ui/react";
 
 export const TpaInputColors = {
     primary: "yellow.300",
-    secondary: "gray.500"
-
-}
+    secondary: "gray.500",
+} as ChakraTheme
 
 
 export const Button: ComponentStyleConfig = {
@@ -53,9 +52,6 @@ export const Input: ComponentStyleConfig = {
             },
         },
     },
-
-
-
     defaultProps: {
         variant: 'physicaldash',
         size: 'lg'

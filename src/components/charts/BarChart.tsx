@@ -12,7 +12,7 @@ const Chart = dynamic(
 
 const series = [{
     name: 'Inflation',
-    data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 5.4, 0.8, 1.5, 3.2]
+    data: [1, 3.1, 4.0, 10.1, 4.0, 3.6, 2, 2.3, 5.4, 6, 1.5, 9.8]
 }]
 
 const options = {

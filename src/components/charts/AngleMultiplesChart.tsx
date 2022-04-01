@@ -14,7 +14,6 @@ interface GaugeProps {
     unit?: string
 }
 
-
 export default function AngleMultipleChart({ colors, series, labels, unit }: GaugeProps) {
 
     const options = {
