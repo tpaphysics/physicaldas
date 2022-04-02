@@ -13,7 +13,7 @@
   ">
   
   <h1 align="center">
-      <img alt="physicaldash" title="physicaldash" src="./public/logo.png" />
+      <img alt="physicaldash" title="physicaldash" src=".github/logo.png" />
   </h1>
   
   
