@@ -5,7 +5,7 @@ export default function Pagination() {
     <HStack paddingTop={8} justify="space-between">
       <Box>
         <Text fontWeight="bold" as="span">
-          0 - 5 de 100
+          0 - 5 of 100
         </Text>
       </Box>
       <HStack spacing={4}>

@@ -12,7 +12,7 @@ export default function SideBar() {
     return (
         <>
             <VStack as="aside" spacing={10} alignItems="flex-start" w="220px"  >
-                <SideBarCategoryMenu menuTitle='Geral' itens={
+                <SideBarCategoryMenu menuTitle='General' itens={
                     [
                         {
                             name: "Dashboard",
@@ -25,7 +25,7 @@ export default function SideBar() {
                         }
                     ]
                 } />
-                <SideBarCategoryMenu menuTitle='Automação' itens={
+                <SideBarCategoryMenu menuTitle='Automation' itens={
                     [
                         {
                             name: "Forms",

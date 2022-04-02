@@ -3,10 +3,10 @@ import { Icon, Input, InputGroup, InputProps, InputRightElement } from '@chakra-
 import React from 'react'
 import { RiSearchLine } from 'react-icons/ri'
 
-export default function RounderInput({ ml, size, ...props }: InputProps) {
+export default function RounderInput({ ml, size, placeholder, ...props }: InputProps) {
     return (
         <InputGroup maxW={360} ml={ml} size={size}>
-            <Input {...props} size={size} variant="searchBox" placeholder='Buscar na plataforma' />
+            <Input {...props} size={size} variant="searchBox" placeholder={placeholder} />
             <InputRightElement h="100%" children={<Icon mr={5} color='gray.300' as={RiSearchLine} />} />
         </InputGroup >
     )
