@@ -3,6 +3,7 @@ import React from 'react'
 import { RiAddLine } from 'react-icons/ri'
 import Header from '../../components/header/Header'
 import SideBar from '../../components/sidebar/SideBar'
+import Pagination from '../../components/users/Pagination'
 import UserTableLine from './UserTableLine'
 
 const users = [
@@ -25,7 +26,7 @@ const users = [
 
 export default function Users() {
     return (
-        <Flex h="100vh" direction='column'>
+        <Flex direction='column'>
             <Header />
             <Flex w="100%" my="6" mx="auto" maxWidth="1480" px="6" flex="1" >
                 <SideBar />
@@ -46,7 +47,9 @@ export default function Users() {
                             </Tr>
                         </Thead>
                         {users.map((user, key) => <UserTableLine name={user.name} email={user.email} createdAs={user.createdAs} key={key} />)}
+
                     </Table>
+                    <Pagination />
                 </Box>
             </Flex>
         </Flex >
