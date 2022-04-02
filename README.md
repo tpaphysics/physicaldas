@@ -65,7 +65,7 @@
 ---
 
 ## **💻 Projeto**
-Está em construção. Physicaldash é um modelo de dashboard criado com tecnologias avançadas de frontend, com tela de login, tela de dashboard, tabela de usuários e tela de cadastro de usuários.
+ Em desemvolvimento, physicaldash é um modelo de dashboard criado com tecnologias avançadas de frontend, com tela de login, tela de dashboard, tabela de usuários e tela de cadastro de usuários.
 
 ---
 
