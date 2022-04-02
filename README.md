@@ -153,25 +153,7 @@ $ yarn dev
  
 
 <a href="https://github.com/tpaphysics">
-<div 
-  style=
-  "width: 106px; 
-  height:106px;
-  background: red;
-  border-radius: 100%;
-  display: flex;
-  align-items:center;
-  justify-content:center;
-    background: #2274cc; /* Old browsers */
-    background: -moz-linear-gradient(left, #2274cc 0%, #26c5d3 36%, #61bf61 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #2274cc 0%,#26c5d3 36%,#61bf61 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #2274cc 0%,#26c5d3 36%,#61bf61 100%); /* W3C, IE10+, FF16+, Chrome26+,  Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2274cc', endColorstr='#61bf61',GradientType=1 ); /* IE6-9 */
-    color: white;
-  ">
  <img style="border-radius: 100%;" src="https://avatars.githubusercontent.com/u/46402647?v=4" width="100px;" alt="Thiago Pacheco de Sndrade"/>
- </div>
-
   <br />
   <sub>
     <b>Thiago Pacheco de Andrade</b>
