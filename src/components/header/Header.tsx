@@ -18,7 +18,7 @@ export default function Header() {
             align="center"
         >
             <Image src="logoSmall.png" w="160px" />
-            <RounderInput size={"sm"} ml={8} />
+            <RounderInput size={"sm"} ml={8} placeholder="Search on platform" />
 
             <HStack ml="auto" spacing={6} >
                 <IconsBar icons={[AiOutlineBell, AiOutlineUserAdd]} />

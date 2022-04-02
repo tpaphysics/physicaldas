@@ -79,10 +79,13 @@ Criamos este layout usando este outro como inspiração. Você pode visualizar a
     <img style="border-radius: 0.5rem;" alt="telasWeb" src=".github/screen01.png" width="100%">
     <br/>
     <br/>
-    <img  style="border-radius: 0.5rem;" alt="telasWeb" src=".github/screen02.png" width="100%">
+    <img  style="border-radius: 0.75rem;" alt="telasWeb" src=".github/screen02.png" width="100%">
     <br/>
     <br/>
     <img style="border-radius: 0.5rem;" alt="telasWeb" src=".github/screen03.png" width="100%">
+    <br/>
+    <br/>
+    <img style="border-radius: 0.5rem;" alt="telasWeb" src=".github/screen04.png" width="100%">
   <div>
 
 ---

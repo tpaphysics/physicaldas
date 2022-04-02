@@ -10,17 +10,17 @@ const users = [
     {
         name: "Thiago Pacheco",
         email: "thiago.p@gmail.com",
-        createdAs: "22 de abril de 2022"
+        createdAs: "Apr-22, 2022"
     },
     {
         name: "Cibele Fáula",
         email: "cibele.f@gmail.com",
-        createdAs: "01 de fevereiro de 2021",
+        createdAs: "Feb-02, 2022",
     },
     {
         name: "Carlos H",
         email: "krloss.H@gmail.com",
-        createdAs: "02 de dezembro de 2021",
+        createdAs: "Dec-25, 2021",
     }
 ]
 
@@ -32,17 +32,17 @@ export default function Users() {
                 <SideBar />
                 <Box flex="1" borderRadius={8} p={8} bg="gray.800">
                     <Flex mb={8} align="center" justify="space-between">
-                        <Heading size="lg" fontWeight="normal" >Usuários</Heading>
-                        <Button as="a" size="sm" color="black" leftIcon={<Icon as={RiAddLine} fontSize={20} />}>Criar novo</Button>
+                        <Heading size="lg" fontWeight="normal" >Users</Heading>
+                        <Button as="a" size="sm" color="black" leftIcon={<Icon as={RiAddLine} fontSize={20} />}>Create new</Button>
                     </Flex>
                     <Table colorScheme="whiteAlpha">
-                        <Thead>
+                        <Thead >
                             <Tr>
                                 <Th px="6" w="8">
                                     <Checkbox colorScheme="yellow" />
                                 </Th>
-                                <Th>Usuário</Th>
-                                <Th>Data de cadastro</Th>
+                                <Th>User</Th>
+                                <Th>Registration date</Th>
                                 <Th w={8}></Th>
                             </Tr>
                         </Thead>

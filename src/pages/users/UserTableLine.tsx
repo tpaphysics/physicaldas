@@ -1,5 +1,5 @@
 import { Tbody, Tr, Td, Checkbox, Box, Text, Button, Icon } from '@chakra-ui/react'
-import { RiAddLine, RiPencilLine } from 'react-icons/ri'
+import { RiPencilLine } from 'react-icons/ri'
 
 
 interface UserTableLineBrops {
@@ -25,7 +25,7 @@ export default function UserTableLine({ name, email, createdAs }: UserTableLineB
                     <Text fontSize="sm">{createdAs}</Text>
                 </Td>
                 <Td>
-                    <Button as="a" size="sm" colorScheme="gray" color="gray.800" leftIcon={<Icon fontSize="16" as={RiPencilLine} />}>Editar</Button>
+                    <Button as="a" size="sm" colorScheme="gray" color="gray.700" leftIcon={<Icon fontSize="16" as={RiPencilLine} />}>Edit</Button>
                 </Td>
             </Tr>
         </Tbody>
