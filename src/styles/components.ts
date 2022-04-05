@@ -28,6 +28,13 @@ export const Input: ComponentStyleConfig = {
                     border: '2px solid',
                     borderColor: 'yellow.300',
                 },
+                _autofill: {
+                    bg: "yellow",
+                    textFillSize: "md",
+                    textFillColor: "#EEEEF2",
+                    boxShadow: "0 0 0px 1000px #181B23 inset",
+                    transition: "background-color 5000s ease-in-out 0s",
+                }
 
             },
         },
