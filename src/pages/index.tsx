@@ -1,7 +1,7 @@
 import { Button, VStack, Flex, Text, Box, Image } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import { avatars } from '../../arrays'
-import TpaInput from '../components/forms/TpInput'
+import TpaInput from '../components/inputs/TpInput'
 import Avatars from '../components/home/Avatars'
 
 

@@ -4,20 +4,25 @@ interface AvatarProfileProps {
     name: string
     email: string
     avatarUrl?: string
+    isShowDescription?: boolean
 }
 
-export default function AvatarProfile({ name, email, avatarUrl }: AvatarProfileProps) {
+export default function AvatarProfile({ name, email, avatarUrl, isShowDescription = true }: AvatarProfileProps) {
     return (
-        <HStack spacing={4} >
+        <HStack spacing={isShowDescription ? 4 : 2} >
             <Box textAlign='right'>
-                <Text>
-                    {name}
-                </Text >
-                <Text fontSize='sm' color='gray.300'>
-                    {email}
-                </Text>
+                {isShowDescription &&
+                    <>
+                        <Text fontSize="sm">
+                            {name}
+                        </Text >
+                        <Text fontSize='xs' color='gray.300'>
+                            {email}
+                        </Text>
+                    </>
+                }
             </Box>
             <Avatar name={name} src={avatarUrl} />
-        </HStack>
+        </HStack >
     )
 }

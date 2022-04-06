@@ -1,47 +1,32 @@
-import { Box, HStack, Icon, Text, VStack } from '@chakra-ui/react'
-import React from 'react'
-import { MdOutlineDashboard } from 'react-icons/md'
-import { FiUsers } from 'react-icons/fi'
-import { FaWpforms } from 'react-icons/fa'
-import { RiNodeTree } from 'react-icons/ri'
-import SideBarCategoryMenu from './SideBarCategoryMenu'
-
+import { Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, HStack, Icon, Text, useBreakpointValue, useDisclosure, VStack } from '@chakra-ui/react'
+import React, { useState } from 'react'
+import { useSidebarDrawer } from '../../hooks/SidebarHook';
+import SidebarNav from './SibarNav'
 
 
 export default function SideBar() {
-    return (
-        <>
-            <VStack as="aside" spacing={10} alignItems="flex-start" w="220px"  >
-                <SideBarCategoryMenu menuTitle='General' itens={
-                    [
-                        {
-                            name: "Dashboard",
-                            icon: MdOutlineDashboard
-                        },
-                        {
-                            name: "Users",
-                            icon: FiUsers
-
-                        }
-                    ]
-                } />
-                <SideBarCategoryMenu menuTitle='Automation' itens={
-                    [
-                        {
-                            name: "Forms",
-                            icon: FaWpforms
-                        },
-                        {
-                            name: "Automation",
-                            icon: RiNodeTree
-
-                        }
-
-                    ]
-                } />
-            </VStack>
-
-
-        </>
-    )
+    const { isOpen, onClose } = useSidebarDrawer();
+    const [isDisclosere, setIsDisclosere] = useState(true);
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true
+    })
+    if (!isWideVersion) {
+        return (
+            <Drawer isOpen={isOpen} placement="left" onClose={onClose} >
+                <DrawerOverlay>
+                    <DrawerContent bg="gray.800">
+                        <DrawerCloseButton mt="2" />
+                        <DrawerHeader>
+                            Navegação
+                        </DrawerHeader>
+                        <DrawerBody>
+                            <SidebarNav />
+                        </DrawerBody>
+                    </DrawerContent>
+                </DrawerOverlay>
+            </ Drawer>
+        )
+    }
+    return <SidebarNav />
 }
