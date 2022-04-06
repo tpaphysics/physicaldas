@@ -12,9 +12,9 @@ import { useMediaQuery } from '@chakra-ui/react'
 
 
 export default function Header() {
-    const [isLargerThan640] = useMediaQuery('(min-width: 640px)')
-    const [isLargerThan480] = useMediaQuery('(min-width: 480px)')
-    const [isLargerThan330] = useMediaQuery('(min-width: 330px)')
+    const [isLargerThan710] = useMediaQuery('(min-width: 710px)')
+    const [isLargerThan560] = useMediaQuery('(min-width: 560px)')
+    const [isLargerThan350] = useMediaQuery('(min-width: 350px)')
 
 
     const { onToggle, isOpen } = useSidebarDrawer();
@@ -36,19 +36,19 @@ export default function Header() {
 
         >
 
-            {isLargerThan330 &&
+            {isLargerThan350 &&
 
-                <Image src={isWideVersion ? "logoSmall.png" : "simbol.png"} w={{ lg: "160px", base: "30px" }} />
+                <Image src={"logoSmall.png"} w={{ lg: "160px", base: "140px" }} />
             }
 
             {
-                isLargerThan640 && <RounderInput size={isWideVersion ? "sm" : "xs"} ml={isWideVersion ? 6 : 0} mx={{ base: 2, sm: 2, lg: 0 }} placeholder="Search on platform" p={{ base: 4, lg: 6 }} />
+                isLargerThan710 && <RounderInput size={isWideVersion ? "sm" : "xs"} ml={isWideVersion ? 6 : 0} mx={{ base: 2, sm: 2, lg: 0 }} placeholder="Search on platform" p={{ base: 4, lg: 6 }} />
             }
 
-            <HStack ml="auto" spacing={{ base: 6, lg: 6, sm: 4 }}>
+            <HStack ml="auto" spacing={{ base: 2, lg: 6, sm: 4 }}>
                 <IconsBar icons={[AiOutlineBell, AiOutlineUserAdd]} />
                 <Divider orientation='vertical' h={8} />
-                <AvatarProfile name='Thiago Pacheco' isShowDescription={isLargerThan480} email="physics.posgrad@gmail.com" avatarUrl='https://avatars.githubusercontent.com/u/46402647?v=4' />
+                <AvatarProfile name='Thiago Pacheco' isShowDescription={isLargerThan560} email="physics.posgrad@gmail.com" avatarUrl='https://avatars.githubusercontent.com/u/46402647?v=4' />
                 {!isWideVersion && <Hamburger size={20} color={theme.colors.gray[300]} toggled={isOpen} onToggle={onToggle} />}
 
             </HStack >
