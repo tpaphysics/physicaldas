@@ -33,6 +33,7 @@ export default function Header() {
             px={{ base: 2, sm: 4, lg: 6 }}
             align="center"
             justifyContent="space-between"
+
         >
 
             {isLargerThan330 &&

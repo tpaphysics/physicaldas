@@ -1,11 +1,27 @@
 import { Button, VStack, Flex, Text, Box, Image, useBreakpointValue } from '@chakra-ui/react'
+import { yupResolver } from '@hookform/resolvers/yup'
 import type { NextPage } from 'next'
+import { useForm } from 'react-hook-form'
 import { avatars } from '../../arrays'
-import TpaInput from '../components/inputs/TpInput'
 import Avatars from '../components/home/Avatars'
+import ErrorInput from '../components/inputs/ErrorInput'
+import { SigInSchema } from '../validations/SignInSchema'
 
 
 const Home: NextPage = () => {
+  const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm({
+    resolver: yupResolver(SigInSchema)
+  });
+
+  function onSubmit(data: any) {
+    return new Promise(() => {
+      setTimeout(() => {
+        console.log(data)
+      }, 3000)
+    })
+  }
+
+
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true
@@ -19,7 +35,6 @@ const Home: NextPage = () => {
       flexDir={isWideVersion ? 'row' : 'column'}
     >
       <Flex
-        as="form"
         w="100%"
         maxW={290}
         borderRadius={8}
@@ -43,18 +58,17 @@ const Home: NextPage = () => {
         <Box width='1px' bg="yellow.400" h={64} my="auto" />
         <Flex
           as="form"
+          onSubmit={handleSubmit(onSubmit)}
           w="100%"
-          maxW={
-
-            460}
+          maxW={460}
           bg="gray.800"
           p={16}
           borderRadius={8}
         >
           <VStack w="100%" spacing={4}>
-            <TpaInput iconType='user' placeholder='Your name' />
-            <TpaInput iconType='lock' placeholder='Your password' isPassword />
-            <Button isFullWidth>Sigin</Button>
+            <ErrorInput id="name" errors={errors} register={register} iconType='user' placeholder='Your name' />
+            <ErrorInput id="password" errors={errors} register={register} iconType='lock' placeholder='Your password' isPassword />
+            <Button isFullWidth type="submit">Sigin</Button>
           </VStack>
         </Flex>
       </Flex>
