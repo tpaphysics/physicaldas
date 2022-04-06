@@ -13,10 +13,10 @@ export default function AvatarProfile({ name, email, avatarUrl, isShowDescriptio
             <Box textAlign='right'>
                 {isShowDescription &&
                     <>
-                        <Text fontSize="sm">
+                        <Text fontSize={{ base: 'sm', lg: 'md' }}>
                             {name}
                         </Text >
-                        <Text fontSize='xs' color='gray.300'>
+                        <Text fontSize={{ base: 'xs', lg: 'sm' }} color='gray.300'>
                             {email}
                         </Text>
                     </>

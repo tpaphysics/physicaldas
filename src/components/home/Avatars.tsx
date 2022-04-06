@@ -42,7 +42,7 @@ export default function Avatars({ mt, avatars, avatarSize, ...props }: AvatarsPr
                     ))
                 }
             </AvatarGroup >
-            <Text fontFamily={'heading'} color="yellow.400" fontSize={{ base: '4xl', md: '4xl' }}>
+            <Text fontFamily={'heading'} color="yellow.400" fontSize={{ base: '2xl', md: '4xl' }}>
                 +
             </Text>
 
@@ -54,8 +54,8 @@ export default function Avatars({ mt, avatars, avatarSize, ...props }: AvatarsPr
                 bg={'gray.900'}
                 color={'white'}
                 rounded={'full'}
-                width={useBreakpointValue({ base: '44px', md: '44px' })}
-                height={useBreakpointValue({ base: '44px', md: '44px' })}
+                width={{ base: '32px', md: '44px' }}
+                height={{ base: '32px', md: '44px' }}
                 position={'relative'}
                 _before={{
                     content: '""',
@@ -71,6 +71,6 @@ export default function Avatars({ mt, avatars, avatarSize, ...props }: AvatarsPr
                 }}>
                 You
             </Flex>
-        </Stack>
+        </Stack >
     )
 }
