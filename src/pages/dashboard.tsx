@@ -17,7 +17,7 @@ export default function Dashboard() {
             <Header />
             <Flex w="100%" my={{ base: 4, lg: 6 }} mx="auto" maxWidth="1480" px={{ base: 2, sm: 4, lg: 6 }} flex="1" >
                 <SideBar />
-                <VStack w="100%" spacing={{ base: 2, sm: 4, lg: 4 }} ml="1">
+                <VStack w="100%" spacing={{ base: 2, sm: 4, lg: 4 }}>
                     <SimpleGrid width="100%" gap={{ base: 2, sm: 4, lg: 4 }} minChildWidth="320px" alignItems="flex-start" >
                         <Flex p={8} bg="gray.800" borderRadius={8} flexDir="column">
                             <Text>Registered in the day </Text>
