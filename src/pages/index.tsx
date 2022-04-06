@@ -42,6 +42,7 @@ const Home: NextPage = () => {
         marginRight={24}
         mx={isWideVersion ? "" : "auto"}
         alignItems={isWideVersion ? "" : "center"}
+        justifyContent="center"
         mb={{ base: 8, lg: 0 }}
       >
         <Image src='logo.png' width={220} />
