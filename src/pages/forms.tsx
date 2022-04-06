@@ -22,10 +22,10 @@ export default function Forms() {
     return (
         <Flex h="100vh" direction='column'>
             <Header />
-            <Flex w="100%" my="6" mx="auto" maxWidth="1480" px="6">
+            <Flex w="100%" my="6" mx="auto" maxWidth="1480" px={{ base: '2', lg: '6' }}>
                 <SideBar />
                 <VStack as="form" onSubmit={handleSubmit(onSubmit)}
-                    p={8} align="left" w="100%" spacing={8} ml="1" bg="gray.800">
+                    p={{ base: '4', lg: "8" }} align="left" w="100%" spacing={8} bg="gray.800">
                     <Heading size="lg" fontWeight="normal" >Create user</Heading>
                     <SimpleGrid width="100%" gap={8} minChildWidth="240px" alignItems="flex-start">
 

@@ -24,7 +24,7 @@ export default function Profile() {
             <Header />
             <Flex w="100%" my="6" mx="auto" maxWidth="1480" px={{ base: 2, lg: 6 }}>
                 <SideBar />
-                <VStack as="form" p={8} align="center" w="100%" spacing={8} bg="gray.800" onSubmit={handleSubmit(onSubmit)}>
+                <VStack as="form" p={{ base: '4', lg: "8" }} align="center" w="100%" spacing={8} bg="gray.800" onSubmit={handleSubmit(onSubmit)}>
                     <Heading size="lg" mr="auto" fontWeight="normal" >Profile</Heading>
                     <AvatarInput id="image" register={register} name="Thiago P" size='lg' errors={errors} />
                     <VStack width="100%" maxW="480" spacing={4}>
