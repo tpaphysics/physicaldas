@@ -1,5 +1,5 @@
 import { Flex, VStack, SimpleGrid, HStack, Button, Heading } from '@chakra-ui/react'
-import TpaInput from '../components/forms/TpInput'
+import TpaInput from '../components/inputs/TpInput'
 import Header from '../components/header/Header'
 import SideBar from '../components/sidebar/SideBar'
 

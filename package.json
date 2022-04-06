@@ -17,6 +17,7 @@
     "@types/yup": "^0.29.13",
     "apexcharts": "^3.33.2",
     "framer-motion": "^6",
+    "hamburger-react": "^2.4.1",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-apexcharts": "^1.4.0",

@@ -1,13 +1,12 @@
 import { Flex, VStack, SimpleGrid, HStack, Button, Heading, Input, FormErrorMessage, Box, FormControl, FormLabel, Avatar } from '@chakra-ui/react'
 import { useMemo, useState } from 'react'
 import { useForm, Controller } from 'react-hook-form'
-import TpaInput from '../components/forms/TpInput'
 import Header from '../components/header/Header'
 import SideBar from '../components/sidebar/SideBar'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { ProfileSchema } from '../validations/ProfileSchema'
-import ErrorInput from '../components/forms/ErrorInput'
-import AvatarInput from '../components/forms/AvatarInput'
+import ErrorInput from '../components/inputs/ErrorInput'
+import AvatarInput from '../components/inputs/AvatarInput'
 
 export default function Profile() {
     const [thumbnail, setThumbnail] = useState();

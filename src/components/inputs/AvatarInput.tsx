@@ -46,14 +46,11 @@ export default function AvatarInput({ id, register, size = 'md', name, errors }:
                             <Avatar position="absolute" size={size} name={name} src={preview} />
                         </Tooltip>
                         :
-
                         <Avatar position="absolute" size={size} name={name} src={preview} />
-
                     }
                 </>
             ) : <Avatar position="absolute" size={size} name={name} src={preview} />
             }
-
             <Input
                 id={id}
                 {...register(id, {
