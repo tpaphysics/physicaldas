@@ -5,10 +5,11 @@ import { RiPencilLine } from 'react-icons/ri'
 interface UserTableLineBrops {
     name: string;
     email: string;
-    createdAs: string
+    createdAs: string;
+    isVisibleDate?: boolean;
 }
 
-export default function UserTableLine({ name, email, createdAs }: UserTableLineBrops) {
+export default function UserTableLine({ name, email, createdAs, isVisibleDate = true }: UserTableLineBrops) {
     return (
         <Tbody>
             <Tr>
@@ -22,10 +23,13 @@ export default function UserTableLine({ name, email, createdAs }: UserTableLineB
                     </Box>
                 </Td>
                 <Td>
-                    <Text fontSize="sm">{createdAs}</Text>
+                    {
+                        isVisibleDate &&
+                        <Text fontSize="sm">{createdAs}</Text>
+                    }
                 </Td>
                 <Td>
-                    <Button as="a" size="sm" colorScheme="gray" color="gray.700" leftIcon={<Icon fontSize="16" as={RiPencilLine} />}>Edit</Button>
+                    <Button size="sm" colorScheme="gray" color="gray.700" leftIcon={<Icon fontSize="16" as={RiPencilLine} />}>Edit</Button>
                 </Td>
             </Tr>
         </Tbody>

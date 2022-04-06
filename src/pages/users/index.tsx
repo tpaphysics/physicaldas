@@ -1,4 +1,4 @@
-import { Flex, VStack, Text, Box, Heading, Button, Icon, Table, Thead, Tbody, Tr, Th, Checkbox, Td } from '@chakra-ui/react'
+import { Flex, VStack, Text, Box, Heading, Button, Icon, Table, Thead, Tbody, Tr, Th, Checkbox, Td, useBreakpointValue } from '@chakra-ui/react'
 import React from 'react'
 import { RiAddLine } from 'react-icons/ri'
 import Header from '../../components/header/Header'
@@ -25,10 +25,14 @@ const users = [
 ]
 
 export default function Users() {
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true,
+    });
     return (
-        <Flex direction='column'>
+        <Flex h="100vh" direction='column'>
             <Header />
-            <Flex w="100%" my="6" mx="auto" maxWidth="1480" px="6" flex="1" >
+            <Flex w="100%" my={{ base: 4, lg: 6 }} mx="auto" maxWidth="1480" px={{ base: 2, sm: 4, lg: 6 }} >
                 <SideBar />
                 <Box flex="1" borderRadius={8} p={8} bg="gray.800">
                     <Flex mb={8} align="center" justify="space-between">
@@ -42,11 +46,14 @@ export default function Users() {
                                     <Checkbox colorScheme="yellow" />
                                 </Th>
                                 <Th>User</Th>
-                                <Th>Registration date</Th>
+                                {isWideVersion &&
+                                    <Th>Registration date</Th>
+                                }
+
                                 <Th w={8}></Th>
                             </Tr>
                         </Thead>
-                        {users.map((user, key) => <UserTableLine name={user.name} email={user.email} createdAs={user.createdAs} key={key} />)}
+                        {users.map((user, key) => <UserTableLine isVisibleDate={isWideVersion} name={user.name} email={user.email} createdAs={user.createdAs} key={key} />)}
 
                     </Table>
                     <Pagination />
