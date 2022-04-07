@@ -1,68 +1,61 @@
-import React from 'react'
-import dynamic from 'next/dynamic'
-import { theme } from '@chakra-ui/react';
-import { ApexOptions } from 'apexcharts';
+import React from "react";
+import dynamic from "next/dynamic";
+import { theme } from "@chakra-ui/react";
+import { ApexOptions } from "apexcharts";
 
-const Chart = dynamic(
-    () => import('react-apexcharts'),
-    { ssr: false }
-)
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-const series = [
-    { name: 'Teste1', data: [32, 129, 66, 70, 7, 12] }
-]
+const series = [{ name: "Teste1", data: [32, 129, 66, 70, 7, 12] }];
 const oprtions = {
-    theme: {
-        palette: 'palette1' // upto palette10
+  theme: {
+    palette: "palette1", // upto palette10
+  },
+
+  // colors: [theme.colors.cyan[600]],
+
+  chart: {
+    toolbar: {
+      show: false,
+    },
+    zoom: {
+      enabled: false,
+    },
+    foreColor: theme.colors.gray[500],
+  },
+
+  grid: {
+    show: false,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  tooltip: {
+    enabled: false,
+  },
+  xaxis: {
+    type: "datetime",
+    axisBorder: {
+      color: theme.colors.gray[600],
+    },
+    axisTicks: {
+      color: theme.colors.gray[600],
     },
 
-    //colors: [theme.colors.cyan[600]],
+    categories: [
+      "2021-03-29T00:00:00.00z",
+      "2021-03-30T00:00:00.00z",
+      "2021-03-31T00:00:00.00z",
+      "2021-04-01T00:00:00.00z",
+      "2021-04-02T00:00:00.00z",
+      "2021-04-03T00:00:00.00z",
+    ],
 
-    chart: {
-        toolbar: {
-            show: false
-        },
-        zoom: {
-            enabled: false
-        },
-        foreColor: theme.colors.gray[500]
-    },
-
-    grid: {
-        show: false
-    },
-    dataLabels: {
-        enabled: false
-    },
-    tooltip: {
-        enabled: false
-    },
-    xaxis: {
-        type: 'datetime',
-        axisBorder: {
-            color: theme.colors.gray[600]
-        },
-        axisTicks: {
-            color: theme.colors.gray[600]
-        },
-
-
-        categories: [
-            '2021-03-29T00:00:00.00z',
-            '2021-03-30T00:00:00.00z',
-            '2021-03-31T00:00:00.00z',
-            '2021-04-01T00:00:00.00z',
-            '2021-04-02T00:00:00.00z',
-            '2021-04-03T00:00:00.00z',
-        ],
-
-        //categories: ["Θ", "2Θ", "3Θ", "4Θ", "5Θ", "6Θ",]
-    }
+    // categories: ["Θ", "2Θ", "3Θ", "4Θ", "5Θ", "6Θ",]
+  },
 } as ApexOptions;
 
-
 export default function LineCart() {
-    return (
-        <Chart type='area' options={oprtions} series={series} height="160px" />
-    )
+  return (
+    <Chart type="area" options={oprtions} series={series} height="160px" />
+  );
 }
