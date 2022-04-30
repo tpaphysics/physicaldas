@@ -19,7 +19,7 @@ interface SignInData {
 
 interface SignInResponse {
   user: User;
-  acess_token: string;
+  access_token: string;
 }
 
 type AuthContext = {
@@ -42,15 +42,22 @@ export function AuthProvider({ children }: IAuthProvider) {
       password,
     });
 
-    const { user, acess_token } = data as SignInResponse;
+    // console.log(data);
 
-    setCookie(undefined, "phisicaldash:token", acess_token, {
+    const { user, access_token: token } = data as SignInResponse;
+
+    setCookie(undefined, "phisicaldash.token", token, {
       maxAge: 60 * 60 * 60, // 1 hour
     });
+    setCookie(undefined, "phisicaldash.user", JSON.stringify(user), {
+      maxAge: 60 * 60 * 60, // 1 hour
+    });
+    // console.log(document.cookie);
+    api.defaults.headers.Authorization = `Bearer ${token}`;
 
     setUser(user);
 
-    router.push("/dashboards");
+    router.push("/dashboard");
   }
   return (
     <AuthContext.Provider value={{ user, isAuthenticate, signIn }}>
