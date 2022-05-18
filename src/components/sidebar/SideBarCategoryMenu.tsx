@@ -1,4 +1,5 @@
-import { Icon, VStack, Text, Link } from "@chakra-ui/react";
+import { Icon, VStack, Text, List } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
 import { IconType } from "react-icons";
 
@@ -23,17 +24,20 @@ export default function SideBarCategoryMenu({
       </Text>
       <VStack align="flex-start" fontSize="md">
         {itens.map((item, index) => (
-          <Link
-            display="flex"
-            _hover={{
-              color: "yellow.400",
-            }}
-            alignItems="center"
-            key={index}
-            gap="4"
-          >
-            <Icon as={item.icon} />
-            <Text>{item.name}</Text>
+          <Link href={`/${item.name.toLocaleLowerCase()}`} passHref>
+            <List
+              cursor="pointer"
+              display="flex"
+              _hover={{
+                color: "yellow.400",
+              }}
+              alignItems="center"
+              gap="4"
+              key={index}
+            >
+              <Icon as={item.icon} />
+              <Text>{item.name}</Text>
+            </List>
           </Link>
         ))}
       </VStack>
