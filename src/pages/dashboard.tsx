@@ -1,5 +1,7 @@
 import { Box, Flex, SimpleGrid, Text, theme, VStack } from "@chakra-ui/react";
 
+import { GetServerSideProps } from "next";
+import { parseCookies } from "nookies";
 import SideBar from "../components/sidebar/SideBar";
 import Header from "../components/header/Header";
 import LineCart from "../components/charts/LineChart";
@@ -73,3 +75,18 @@ export default function Dashboard() {
     </Flex>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async ctx => {
+  const { "phisicaldash.token": token } = parseCookies(ctx);
+  if (!token) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: true,
+      },
+    };
+  }
+  return {
+    props: {},
+  };
+};

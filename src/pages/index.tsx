@@ -8,7 +8,8 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { yupResolver } from "@hookform/resolvers/yup";
-import type { NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
+import { parseCookies } from "nookies";
 import { useForm } from "react-hook-form";
 import { avatars } from "../../arrays";
 import api from "../api/api";
@@ -112,3 +113,18 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getServerSideProps: GetServerSideProps = async ctx => {
+  const { "phisicaldash.token": token } = parseCookies(ctx);
+  if (token) {
+    return {
+      redirect: {
+        destination: "/dashboard",
+        permanent: true,
+      },
+    };
+  }
+  return {
+    props: {},
+  };
+};

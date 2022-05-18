@@ -8,6 +8,8 @@ import {
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { GetServerSideProps } from "next";
+import { parseCookies } from "nookies";
 import Header from "../components/header/Header";
 import SideBar from "../components/sidebar/SideBar";
 import ErrorInput from "../components/inputs/ErrorInput";
@@ -109,3 +111,18 @@ export default function Forms() {
     </Flex>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async ctx => {
+  const { "phisicaldash.token": token } = parseCookies(ctx);
+  if (!token) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: true,
+      },
+    };
+  }
+  return {
+    props: {},
+  };
+};

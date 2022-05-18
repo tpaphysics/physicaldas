@@ -10,6 +10,7 @@ import {
 import React from "react";
 import { AiOutlineUserAdd, AiOutlineBell } from "react-icons/ai";
 import { Fade as Hamburger } from "hamburger-react";
+import Link from "next/link";
 import RounderInput from "../inputs/RounderInput";
 import AvatarProfile from "./AvatarProfile";
 import IconsBar from "./IconsBar";

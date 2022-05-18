@@ -1,4 +1,5 @@
 import { HStack, Box, Text, Avatar } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
 
 interface AvatarProfileProps {
@@ -26,7 +27,9 @@ export default function AvatarProfile({
           </>
         )}
       </Box>
-      <Avatar name={name} src={avatarUrl} />
+      <Link href="/profile" passHref>
+        <Avatar name={name} src={avatarUrl} cursor="pointer" />
+      </Link>
     </HStack>
   );
 }
