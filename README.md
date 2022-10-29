@@ -1,4 +1,4 @@
-<div 
+<div
   align="center"
   style="
     background: #29292e;
@@ -11,22 +11,22 @@
     margin: 10px 20px;
     border: 2px solid #444444;
   ">
-  
+
   <h1 align="center">
       <img alt="physicaldash" title="physicaldash" src=".github/logo.png" />
   </h1>
-  
-  
 
-  [![Licence](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE.md)  <img alt="TypeScript" src="https://img.shields.io/badge/typescript-%23007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white"/> 
-  <img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/> 
+
+
+  [![Licence](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE.md)  <img alt="TypeScript" src="https://img.shields.io/badge/typescript-%23007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white"/>
+  <img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
   <img alt="Next JS" src="https://img.shields.io/badge/nextjs-%23000000.svg?&style=for-the-badge&logo=next.js&logoColor=white"/>
   <img alt="Chakra-ui" src="https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white"/>
-  
-  
-  
+
+
+
   <!-- ![GitHub][repository_license_badge] ![React_Badge][web_react_badge] ![Types][typescript_shields] ![Next][next_shields] -->
-  
+
 </div>
 
 <div align="center">
@@ -36,22 +36,22 @@
 
 <p align="center">
   <strong>
-      <a href="#-projeto">Projeto</a> &nbsp;|&nbsp; 
+      <a href="#-projeto">Projeto</a> &nbsp;|&nbsp;
   </strong>
   <strong>
-      <a href="#-layout">Layout</a> &nbsp;|&nbsp; 
+      <a href="#-layout">Layout</a> &nbsp;|&nbsp;
   </strong>
   <strong>
-      <a href="#-tecnologias">Tecnologias</a> &nbsp;|&nbsp; 
+      <a href="#-tecnologias">Tecnologias</a> &nbsp;|&nbsp;
   </strong>
   <strong>
-      <a href="#-como-executar-o-projeto">Executando</a> &nbsp;|&nbsp; 
+      <a href="#-como-executar-o-projeto">Executando</a> &nbsp;|&nbsp;
   </strong>
   <strong>
-      <a href="#-referências">Referências</a> &nbsp;|&nbsp; 
+      <a href="#-referências">Referências</a> &nbsp;|&nbsp;
   </strong>
   <strong>
-      <a href="#-autor">Autor</a> 
+      <a href="#-autor">Autor</a>
   </strong>
 </p>
 
@@ -65,15 +65,15 @@
 ---
 
 ## **💻 Projeto**
- Em desemvolvimento, physicaldash é um modelo de dashboard criado com tecnologias avançadas de frontend, com tela de login, tela de dashboard, tabela de usuários e tela de cadastro de usuários.
+ Physicaldash é uma plataforma de controle de usuários com tela de dashboards criado com [Next.Js](https://nextjs.org/) e o [Chakra UI](https://chakra-ui.com/).
 
 ---
 
 ## **🔖 Layout**
 
-Criamos este layout usando este outro como inspiração. Você pode visualizar através [desse link](https://www.figma.com/file/av5oayZQ7CxXZkHkk5cAk4/Ignite-Dashgo-Copy?node-id=0%3A1). Você irá precisar ter uma conta no [Figma](http://figma.com/).
+Usamos como inspiração um projeto do pessoal da [Rocketseat](https://www.rocketseat.com.br/) que foi realizado em um de seus bootcamps. [Aqui](https://www.figma.com/file/av5oayZQ7CxXZkHkk5cAk4/Ignite-Dashgo-Copy?node-id=0%3A1) está layout no figma.
 
-#### **Web**
+#### **App**
 
   <div>
     <img style="border-radius: 0.5rem;" alt="telasWeb" src=".github/screen01.png" width="100%">
@@ -97,63 +97,25 @@ Criamos este layout usando este outro como inspiração. Você pode visualizar a
   - **[Chakra UI][chakraui]**
   - **[Apex Charts][apexcharts]**
   - **[Axios][axios]**
-   
-   
-> \* Veja o arquivo <kbd>[package.json](./package.json)</kbd>
 
- #### **Utilitários**
- 
-  - Editor: **[Visual Studio Code][vscode]**
----
+##  **🚀 Start**
 
-##  **🚀 Como executar o projeto**
-
-### Configurações Iniciais
-
-Primeiro, você precisa ter o <kbd>[NodeJS](https://nodejs.org/en/download/)</kbd> instalado na sua máquina. 
-
-Se você estiver utilizando o **Linux**, você pode optar por instalar o **Node** através do gerênciador de versões <kbd>[asdf]</kbd> para facilitar o processo de mudança da versão do **Node**, quando for necessário.
-
-Você pode optar também por utilizar o **yarn** no lugar do **npm**. Você pode instalar clicando nesse <kbd>[link][yarn]</kbd>, ou através do <kbd>[asdf]</kbd>.
-
-Após ter o **Node** instalado, instale as dependências do **React** de forma global, utilizando os comandos:
-
-Instale as dependências contidas nos arquivos `package.json` que se encontram na raíz do repositório. Para instalar as dependências, basta abrir o terminal no diretório e digitar o comando:
-
-```sh
-$ npm install
-
-# ou
-$ yarn
+```bash
+yarn && yarn dev
 ```
 
-### Executando o WebSite
-
-```sh
-# Executando o website no modo de desenvolvimento:
-$ npm run dev
-
-    OU
-
-# Executando o website no modo de desenvolvimento:
-$ yarn dev
-```
-> Se o browser não abrir automaticamente, acesse: http://localhost:3000.
-
----
 
 ## **📚 Referências**
 
-- [Blog Rocketseat][rocketseat_blog]
-- [ReactJS][react_doc] | [ReactJS pt-BR][react_doc_ptbr]
+- [ReactJS][react_doc]
 - [Next.js][next]
 - [Node.js][node]
 
 
 
 ## **👨‍🚀 Autor**
- 
-<a href="https://github.com/tpaphysics">
+
+ <a href="https://github.com/tpaphysics">
 <img alt="Thiago Pacheco" src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/46402647?v=4?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d" width="100px"/>
   <br />
   <sub>
@@ -172,12 +134,8 @@ $ yarn dev
 
 ## **📝 Licença**
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+Veja o [arquivo](LICENSE.md) para mais detalhes.
 
-
-<!-- Referencias -->
-
-[rocketseat_blog]: https://blog.rocketseat.com.br/
 
 <!-- Badges -->
 
