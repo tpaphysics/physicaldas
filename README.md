@@ -24,47 +24,16 @@
   <img alt="Chakra-ui" src="https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white"/>
 
 
-
-  <!-- ![GitHub][repository_license_badge] ![React_Badge][web_react_badge] ![Types][typescript_shields] ![Next][next_shields] -->
-
 </div>
-
-<div align="center">
-
-<br>
-
-
-<p align="center">
-  <strong>
-      <a href="#-projeto">Projeto</a> &nbsp;|&nbsp;
-  </strong>
-  <strong>
-      <a href="#-layout">Layout</a> &nbsp;|&nbsp;
-  </strong>
-  <strong>
-      <a href="#-tecnologias">Tecnologias</a> &nbsp;|&nbsp;
-  </strong>
-  <strong>
-      <a href="#-como-executar-o-projeto">Executando</a> &nbsp;|&nbsp;
-  </strong>
-  <strong>
-      <a href="#-referências">Referências</a> &nbsp;|&nbsp;
-  </strong>
-  <strong>
-      <a href="#-autor">Autor</a>
-  </strong>
-</p>
-
-
-<p align="center">
-  <img alt="ignews" src=".github/physicaldash.png" width="100%">
-</p>
-</div>
-
 
 ---
 
 ## **💻 Projeto**
+
+<p align="center">
+  <img alt="ignews" src=".github/physicaldash.png" width="100%">
+</p>
+
  Physicaldash é uma plataforma de controle de usuários com tela de dashboards criado com [Next.Js](https://nextjs.org/) e o [Chakra UI](https://chakra-ui.com/).
 
 ---
